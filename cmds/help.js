@@ -16,12 +16,12 @@ const menus = {
     outside forecast <options>
 
     --location, -l ..... the location to use`,
-}
+};
 
 module.exports = (args) => {
-  const subCmd = args._[0] === 'help'
+  const subCmd = (args._[0] === 'help'
     ? args._[1]
-    : args._[0]
+    : args._[0]);
 
-  console.log(menus[subCmd] || menus.main)
-}
+  console.log(menus[subCmd] || menus.main);
+};

@@ -1,21 +1,21 @@
-const ora = require('ora')
-const getWeather = require('../utils/weather')
-const getLocation = require('../utils/location')
+const ora = require('ora');
+const getWeather = require('../utils/weather');
+const getLocation = require('../utils/location');
 
 module.exports = async (args) => {
-  const spinner = ora().start()
+  const spinner = ora().start();
 
   try {
-    const location = args.location || args.l || await getLocation()
-    const weather = await getWeather(location)
+    const location = args.location || args.l || await getLocation();
+    const weather = await getWeather(location);
 
-    spinner.stop()
+    spinner.stop();
 
-    console.log(`Current conditions in ${location}:`)
-    console.log(`\t${weather.condition.temp}° ${weather.condition.text}`)
+    console.log(`Current conditions in ${location}:`);
+    console.log(`\t${weather.condition.temp}° ${weather.condition.text}`);
   } catch (err) {
-    spinner.stop()
+    spinner.stop();
 
-    console.error(err)
+    console.error(err);
   }
-}
+};
