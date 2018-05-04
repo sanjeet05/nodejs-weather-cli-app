@@ -8,7 +8,7 @@ npm install
 
 ```
 
-### Run this app in locally ###
+### Run this app in locally: ###
 ```
 ./bin/outside help
 ./bin/outside today
@@ -17,7 +17,7 @@ npm install
 
 ```
 
-### we can create symlink link to system path and use as command ###
+### We can create symlink link to system path and use as commands: ###
 ```
 npm link
 
